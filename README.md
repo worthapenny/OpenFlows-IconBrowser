@@ -8,7 +8,7 @@ Technically, it should work with all the OpenFlows software.
 
 Make sure to download the right version of the application. The OpenFlows-Water (OFW) is relative new API, so newer version of Water products are currently supported
 
-### [Download v10.4.x.x](OFW.IsolationValveAdder/_setup.bat)
+### [Download v10.4x](https://github.com/worthapenny/OpenFlows-IconBrowser/releases/download/v10.4x/OF.IconBrowser.exe)
 
 ## Setup (Must Do!)
 
