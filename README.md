@@ -19,8 +19,16 @@ After extracting the contents from the compressed file, paste them over to the i
 Open up the `OF.IconBrowser.exe` and screen like below loads.
 Once the windows loads, either search a keyword or scan through the list.
 
-![icon_browser_form](https://github.com/worthapenny/OpenFlows-Water--IsolationValveAdder/blob/main/Images/isolation_valve_adder_form.png "Isolation Valve Adder Form")
+![icon_browser_form](https://github.com/worthapenny/OpenFlows-IconBrowser/blob/main/Images/IconBrowser_Form.png "Icon Browser Form")
 
+
+## Usage
+
+Provide `Icon` or `Image` to the UI like below:
+```csharp
+this.Icon = (Icon)GraphicResourceManager.Current[StandardGraphicResourceNames.IconView];
+this.Image = ((Icon)GraphicResourceManager.Current[StandardGraphicResourceNames.IconView]).ToBitmap();
+```
 
 ## Other projects based on OpenFlows Water and/or WaterObjects.NET
 

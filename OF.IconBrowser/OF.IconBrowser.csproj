@@ -157,9 +157,6 @@
     </Compile>
     <None Include="_setup.bat" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="__App.config" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>cd $(ProjectDir)
