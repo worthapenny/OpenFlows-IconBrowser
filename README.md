@@ -1,4 +1,4 @@
-![GitHub release (latest by date)](https://github.com/worthapenny/OpenFlows-IconBrowser/releases)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/worthapenny/OpenFlows-IconBrowser.svg)
 
 # Search the Icons (Images) that comes with the OpenFlows software
 
