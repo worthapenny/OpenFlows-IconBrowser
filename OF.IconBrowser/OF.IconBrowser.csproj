@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -11,10 +12,11 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <BaseIntermediateOutputPath>$(SolutionDir)..\Output\$(AssemblyName)\obj</BaseIntermediateOutputPath>
-    <OutputPath>$(SolutionDir)..\Output\$(AssemblyName)\bin\$(Platform)\$(Configuration)\</OutputPath>
+    <BaseIntermediateOutputPath>..\Output\$(AssemblyName)\obj</BaseIntermediateOutputPath>
+    <OutputPath>..\Output\$(AssemblyName)\bin\$(Platform)\$(Configuration)\</OutputPath>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
+  
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
@@ -23,7 +25,7 @@
     <LangVersion>7.3</LangVersion>
     <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>true</Prefer32Bit>
-    <OutputPath>..\Output\OF.IconBrowser\bin\x64\Debug\</OutputPath>
+    <OutputPath>..\Output\bin\x64\Debug\</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
     <DefineConstants>TRACE</DefineConstants>
@@ -33,6 +35,7 @@
     <LangVersion>7.3</LangVersion>
     <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>true</Prefer32Bit>
+    <OutputPath>..\Output\bin\x64\Debug\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Haestad.Domain">
@@ -146,6 +149,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -161,5 +165,8 @@
   <PropertyGroup>
     <PostBuildEvent>cd $(ProjectDir)
 call _setup.bat "$(TargetDir)" $(PlatformName)</PostBuildEvent>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <ProjectGuid>{CB69918D-5E3B-47E2-A0E7-F2A2A7BED5D6}</ProjectGuid>
   </PropertyGroup>
 </Project>
