@@ -1,3 +1,5 @@
+![GitHub release (latest by date)](https://github.com/worthapenny/OpenFlows-IconBrowser/releases)
+
 # Search the Icons (Images) that comes with the OpenFlows software
 
 The tool allows to search/filter for the icons using keywords. 
