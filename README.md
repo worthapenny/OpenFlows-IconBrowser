@@ -19,8 +19,7 @@ After extracting the contents from the compressed file, paste them over to the i
 Open up the `OF.IconBrowser.exe` and screen like below loads.
 Once the windows loads, either search a keyword or scan through the list.
 
-![icon_browser_form](https://github.com/worthapenny/OpenFlows-IconBrowser/blob/main/Images/IconBrowser_Form.png "Icon Browser Form")
-
+![icon_browser_form](https://github.com/worthapenny/OpenFlows-IconBrowser/blob/main/Images/IconBrowser_From.png "Icon Browser Form")
 
 ## Usage
 
