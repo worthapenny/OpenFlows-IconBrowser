@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-  
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -16,7 +15,6 @@
     <OutputPath>..\Output\$(AssemblyName)\bin\$(Platform)\$(Configuration)\</OutputPath>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
-  
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
@@ -37,82 +35,29 @@
     <Prefer32Bit>true</Prefer32Bit>
     <OutputPath>..\Output\bin\x64\Debug\</OutputPath>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>OF.IconBrowser.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Haestad.Domain">
-      <HintPath>C:\Program Files (x86)\Bentley\WaterGEMS\x64\Haestad.Domain.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Haestad.Domain.DataObjects.Water">
-      <HintPath>C:\Program Files (x86)\Bentley\WaterGEMS\x64\Haestad.Domain.DataObjects.Water.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Haestad.Domain.LibraryObjects">
-      <HintPath>C:\Program Files (x86)\Bentley\WaterGEMS\x64\Haestad.Domain.LibraryObjects.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Haestad.Domain.LibraryObjects.Install">
-      <HintPath>C:\Program Files (x86)\Bentley\WaterGEMS\x64\Haestad.Domain.LibraryObjects.Install.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Haestad.Domain.ModelingObjects.Water">
-      <HintPath>C:\Program Files (x86)\Bentley\WaterGEMS\x64\Haestad.Domain.ModelingObjects.Water.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Haestad.Drawing">
-      <HintPath>C:\Program Files (x86)\Bentley\WaterGEMS\x64\Haestad.Drawing.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Haestad.Drawing.Control">
-      <HintPath>C:\Program Files (x86)\Bentley\WaterGEMS\x64\Haestad.Drawing.Control.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Haestad.Drawing.Domain">
-      <HintPath>C:\Program Files (x86)\Bentley\WaterGEMS\x64\Haestad.Drawing.Domain.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Haestad.Framework">
-      <HintPath>C:\Program Files (x86)\Bentley\WaterGEMS\x64\Haestad.Framework.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Haestad.Framework.Windows.Forms">
-      <HintPath>C:\Program Files (x86)\Bentley\WaterGEMS\x64\Haestad.Framework.Windows.Forms.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Haestad.Framework.Windows.Forms.Divil">
-      <HintPath>C:\Program Files (x86)\Bentley\WaterGEMS\x64\Haestad.Framework.Windows.Forms.Divil.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Haestad.LicensingFacade">
-      <HintPath>C:\Program Files (x86)\Bentley\WaterGEMS\x64\Haestad.LicensingFacade.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Haestad.Mapping">
-      <HintPath>C:\Program Files (x86)\Bentley\WaterGEMS\x64\Haestad.Mapping.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Haestad.Support">
-      <HintPath>C:\Program Files (x86)\Bentley\WaterGEMS\x64\Haestad.Support.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Haestad.Water.Forms">
-      <HintPath>C:\Program Files (x86)\Bentley\WaterGEMS\x64\Haestad.Water.Forms.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Haestad.WaterProduct">
-      <HintPath>C:\Program Files (x86)\Bentley\WaterGEMS\x64\Haestad.WaterProduct.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="OpenFlows">
-      <HintPath>C:\Program Files (x86)\Bentley\WaterGEMS\x64\OpenFlows.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="OpenFlows.Water">
-      <HintPath>C:\Program Files (x86)\Bentley\WaterGEMS\x64\OpenFlows.Water.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="OpenFlows.Water.Application, Version=10.4.0.10, Culture=neutral, PublicKeyToken=b4db808388021f6e, processorArchitecture=MSIL">
+    <Reference Include="Haestad.Framework, Version=10.4.0.30, Culture=neutral, PublicKeyToken=b4db808388021f6e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Bentley\WaterGEMS\x64\OpenFlows.Water.Application.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Bentley\WaterGEMS\Haestad.Framework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Haestad.Framework.Windows.Forms, Version=10.4.0.30, Culture=neutral, PublicKeyToken=b4db808388021f6e, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Bentley\WaterGEMS\x64\Haestad.Framework.Windows.Forms.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Haestad.LicensingFacade, Version=10.4.0.30, Culture=neutral, PublicKeyToken=b4db808388021f6e, processorArchitecture=AMD64">
+      <HintPath>C:\Program Files (x86)\Bentley\WaterGEMS\x64\Haestad.LicensingFacade.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Haestad.Support, Version=10.4.0.30, Culture=neutral, PublicKeyToken=b4db808388021f6e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Bentley\WaterGEMS\Haestad.Support.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -148,6 +93,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">

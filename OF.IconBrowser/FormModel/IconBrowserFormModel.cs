@@ -3,6 +3,7 @@ using Haestad.Support.Support;
 using OF.IconBrowser.Support;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Threading.Tasks;
 
 namespace OF.IconBrowser.FormModel
 {
@@ -16,9 +17,9 @@ namespace OF.IconBrowser.FormModel
 
         #region Public Methods
         
-        public List<IconResourceModel> Filter(string keyword, bool isEnlarged)
+        public async Task<List<IconResourceModel>> FilterAsync(string keyword, bool isEnlarged)
         {
-            LoadIcons();
+            await LoadIconsAsync();
 
             var iconResources = new List<IconResourceModel>();
             foreach (var resource in IconResources)
@@ -49,7 +50,6 @@ namespace OF.IconBrowser.FormModel
             {
                 try
                 {
-
                     var name = field.GetValue(field.Name);
                     if (name != null)
                     {
@@ -85,6 +85,10 @@ namespace OF.IconBrowser.FormModel
                 {
                 }
             }
+        }
+        private async Task LoadIconsAsync()
+        {
+            await Task.Run(() => LoadIcons());
         }
         #endregion
 

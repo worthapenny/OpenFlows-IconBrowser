@@ -29,11 +29,17 @@ namespace OF.IconBrowser.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.checkBoxEnlarge = new System.Windows.Forms.CheckBox();
             this.textBoxFilter = new System.Windows.Forms.TextBox();
             this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.copyIconToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.copyBitmapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelFilter = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            this.contextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // checkBoxEnlarge
@@ -66,11 +72,48 @@ namespace OF.IconBrowser.Forms
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.ContextMenuStrip = this.contextMenuStrip;
             this.dataGridView.Location = new System.Drawing.Point(12, 38);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
             this.dataGridView.Size = new System.Drawing.Size(776, 400);
             this.dataGridView.TabIndex = 3;
+            this.dataGridView.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridView_MouseDown);
+            // 
+            // contextMenuStrip
+            // 
+            this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.copyIconToolStripMenuItem,
+            this.copyBitmapToolStripMenuItem,
+            this.saveToolStripMenuItem});
+            this.contextMenuStrip.Name = "contextMenuStrip";
+            this.contextMenuStrip.Size = new System.Drawing.Size(218, 92);
+            this.contextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_Opening);
+            // 
+            // copyIconToolStripMenuItem
+            // 
+            this.copyIconToolStripMenuItem.Name = "copyIconToolStripMenuItem";
+            this.copyIconToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
+            this.copyIconToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
+            this.copyIconToolStripMenuItem.Text = "Copy Icon";
+            this.copyIconToolStripMenuItem.Click += new System.EventHandler(this.copyIconToolStripMenuItem_Click);
+            // 
+            // copyBitmapToolStripMenuItem
+            // 
+            this.copyBitmapToolStripMenuItem.Name = "copyBitmapToolStripMenuItem";
+            this.copyBitmapToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.C)));
+            this.copyBitmapToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
+            this.copyBitmapToolStripMenuItem.Text = "Copy Bitmap";
+            this.copyBitmapToolStripMenuItem.Click += new System.EventHandler(this.copyBitmapToolStripMenuItem_Click);
+            // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
+            this.saveToolStripMenuItem.Text = "Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // labelFilter
             // 
@@ -94,9 +137,9 @@ namespace OF.IconBrowser.Forms
             this.helpProviderHaestadForm.SetShowHelp(this, false);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Icon Browser";
-            this.Load += new System.EventHandler(this.IconBrowserParentForm_Load);
             this.SizeChanged += new System.EventHandler(this.IconBrowserParentForm_SizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            this.contextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -108,6 +151,10 @@ namespace OF.IconBrowser.Forms
         private System.Windows.Forms.TextBox textBoxFilter;
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Label labelFilter;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem copyIconToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem copyBitmapToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
     }
 }
 
