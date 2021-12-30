@@ -11,6 +11,7 @@ Technically, it should work with all the OpenFlows software.
 Make sure to download the right version of the application. The OpenFlows-Water (OFW) is relative new API, so newer version of Water products are currently supported
 
 ### [Download v10.4x](https://github.com/worthapenny/OpenFlows-IconBrowser/releases/download/v10.4x/OF.IconBrowser.exe)
+### [Download v10.3.5](https://github.com/worthapenny/OpenFlows-IconBrowser/releases/download/v10.3.5/OF.IconBrowser.exe)
 
 ## Setup (Must Do!)
 
