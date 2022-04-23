@@ -2,7 +2,8 @@
 echo %~f0 %1 %2
 
 REM set installdir="C:\Program Files (x86)\Bentley\WaterGEMS\x64\"
-set installdir="C:\Program Files (x86)\Bentley\WaterCAD\x64\"
+REM set installdir="C:\Program Files (x86)\Bentley\WaterCAD\x64\"
+set installdir="C:\Program Files (x86)\Bentley\SewerGEMS\x64\"
 
 
 pushd %installdir%
